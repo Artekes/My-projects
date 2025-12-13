@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	background-image: url("https://i0.wp.com/www.newyorkinfo.nl/wp-content/uploads/2024/03/Central-Park-New-York-scaled.webp?fit=2560%2C1431&ssl=1");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#clock-container {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+}
+
+#clock {
+	font-family: monospace;
+	font-size: 6.5em;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	backdrop-filter: blur(10px);
+	width: 100%;
+	background-color: hsla(0, 0%, 100%, 0.1);
+}
