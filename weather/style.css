@@ -1,0 +1,87 @@
+body {
+	font-family: monospace;
+	background-color: hsl(0, 0%, 90%);
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.weather-form {
+	margin: 20px;
+}
+
+.city-input {
+	padding: 10px;
+	font-size: 2em;
+	font-weight: bold;
+	border: 2px solid hsla(0, 0%, 20%, 0.3);
+	border-radius: 10px;
+	margin: 10px;
+	width: 300px;
+}
+
+button[type='submit'] {
+	padding: 10px 20px;
+	font-weight: bold;
+	font-size: 2em;
+	background-color: hsl(122, 39%, 50%);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: hsl(122, 39%, 40%);
+}
+
+.card {
+	background: linear-gradient(180deg, #067ffa, #F2CD03);
+	padding: 50px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 15px;
+}
+h1 {
+	font-size: 3.5em;
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+
+p {
+	font-size: 1.5em;
+	margin: 5px 0;
+}
+
+.city-display, .temp-display {
+	font-size: 3.5em;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.75);
+	margin-bottom: 25px;
+}
+
+.humidity-display {
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.desc-display {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.weather-emoji {
+	font-size: 7.5em;
+	margin: 0;
+}
+
+.error-display {
+	font-size: 2.5em;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.75);
+}
