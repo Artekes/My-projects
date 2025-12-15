@@ -1,14 +1,72 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Selection</title>
-  </head>
-  <body>
-    <a href="clicking-cube/index.html">Clicking cube</a>
-    <a href="calculator/index.html">Calculator</a>
-    <a href="stopwatch/index.html">Stopwatch</a>
-    <a href="temperature/index.html">Temperature Converter</a>
-    <a href="watch/index.html">Digital Clock</a>
-    <a href="rockPaperScissors/index.html">Rock Paper Scissors</a>
-    <a href="weather/index.html">Weather App</a>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="carousel">
+		<div class="card" id="calculator_card">
+			<div class="card-content">
+				<h1 class="title">Calculator</h1>
+				<p class="description">A simple calculator using javascript to interact with. Pretty simple construction but at least its looking like a calculator on iPhone.</p>
+			</div>
+			<a href="calculator/index.html" class="go-to-project">See more</a>
+		</div>
+
+		<div class="card" id="clicking_cube">
+			<div class="card-content">
+				<h1 class="title">Clicking Cube</h1>
+				<p class="description">Just trying some events with addEventListener in JS</p>
+			</div>
+			<a href="clicking-cube/index.html" class="go-to-project">See more</a>
+		</div>
+
+		<div class="card" id="rock_paper_scissors">
+			<div class="card-content">
+				<h1 class="title">Rock Paper Scissors</h1>
+				<p class="description">Just rock paper scissors with beautifull design.</p>
+			</div>
+			<a href="rockPaperScissors/index.html" class="go-to-project">See more</a>
+		</div>
+
+		<div class="card" id="stopwatch">
+			<div class="card-content">
+				<h1 class="title">Stopwatch</h1>
+				<p class="description">Trying to understand JS time functions. Btw going to add stopwatch to my clock project.</p>
+			</div>
+			<a href="stopwatch/index.html" class="go-to-project">See more</a>
+		</div>
+
+		<div class="card" id="temperature">
+			<div class="card-content">
+				<h1 class="title">Temperature</h1>
+				<p class="description">My first project with JS. Just a converter temperature from Celsium to Farenheit and back.</p>
+			</div>
+			<a href="temperature/index.html" class="go-to-project">See more</a>
+		</div>
+
+		<div class="card" id="watch">
+			<div class="card-content">
+				<h1 class="title">Digital clock</h1>
+				<p class="description">Maybe the most beautifull project that i have ever made. It was made by a tutorial ._.</p>
+			</div>
+			<a href="watch/index.html" class="go-to-project">See more</a>
+		</div>
+
+		<div class="card" id="weather_app">
+			<div class="card-content">
+				<h1 class="title">Weather App</h1>
+				<p class="description">The last project on 12 hours course of JS. It's using a weather API. I'm not proud of this project because it was totaly made by a tutorial. there is nothing mine.</p>
+			</div>
+			<a href="weather/index.html" class="go-to-project">See more</a>
+		</div>
+		<button id="prev_button" onclick="prevCard()"><</button>
+		<button id="next_button" onclick="nextCard()">></button>
+	</div>
+
+	<script src="script.js"></script>
+</body>
 </html>
