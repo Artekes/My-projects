@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+}
+
+body {
+	background-color: black;
+}
+
+img {
+	width: 100%;
+	height: 50%;
+	mask-image: linear-gradient(270deg, black, transparent);
+	/*clip-path: ellipse(20% 50% at left);*/
+	-webkit-mask-image: radial-gradient(ellipse 40% 100% at 15% 50%, transparent 60%, black);
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	translate: -50% -50%;
+	font-size: 5rem;
+	color: transparent;
+	background: linear-gradient(270deg, #20F8DC, #1AF26B, #F2E120);
+	background-clip: text;
+}
