@@ -119,13 +119,14 @@ section, .flex-container {
 main {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
 	grid-template-areas: 
 	"calculator calculator"
 	"clicking-cube rock-paper-scissors"
 	"stopwatch temperature-converter"
 	"digital-clock digital-clock"
-	"weather-app cropped-image";
-	gap: 1rem;
+	"weather-app cropped-image"
+	"to-do-app to-do-app";
 }
 
 aside {
