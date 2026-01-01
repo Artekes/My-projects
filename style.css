@@ -1,95 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+	--base-color: #ffffff;
+	--text-color: #000000;
+	--primary-color: #ffc06e;
+	--color-1: #f9f6f3;
+	--color-2: #f3f7f9;
+	--color-3: #f6f3f9;
+	--color-gradient-1: #3A0EF6;
+	--color-gradient-2: #11E9F6;
+	--color-gradient-3: #10F84C;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
-	scrollbar-width: none;
+	font-family: Poppins;
+	color: var(--text-color);
 }
 
 body {
-	font-family: monospace;
-	background-color: rgba(0, 0, 0, 0.9);
-	height: 100vh;
-	color: white;
-	display: flex;
-	align-items: center;
-	margin: 15px;
+	background-color: var(--base-color);
 }
 
-#carousel {
-	display: flex;
-	gap: 1em;
-	width: 100%;
-	height: 350px;
-	overflow-x: auto;
-	scrollbar-width: none;
-	padding: 0 0px 0 10px;
-}
-
-.card {
-	min-width: 32.5%;
-	height: 300px;
-	border: 2px solid white;
-	border-radius: 15px;
-	position: relative;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
-}
-
-.title {
+h1, h2, h3 {
+	font-family: Merriweather, Poppins;
 	text-align: center;
-	border-bottom: 1px solid white;
-	width: 95%;
-	margin: 30px auto 0 auto;
-	padding-bottom: 20px;
-	font-size: 2.5em;
 }
 
-.description {
-	padding: 0 5%;
-	font-size: 1.5em;
+p {
+	font-size: 1.1rem;
+	text-align: center;
 }
 
-.go-to-project {
+section a {
 	background-image: linear-gradient(320deg, #0055FF, #032D80);
-	position: absolute;
-	bottom: 0%;
-	left: 50%;
-	translate: -50% 50%;
 	color: white;
 	text-decoration: none;
-	width: 50%;
-	height: 20%;
 	border: 2px solid white;
 	border-radius: 50px;
+	font-size: 1.5em;
+	padding: .5rem 1rem;
+}
+
+header nav {
+	display: inherit;
+	margin: 1rem auto 3rem auto;
+	width: min(1000px, 100%);
+}
+
+header nav ul {
 	display: flex;
 	align-items: center;
+	list-style-type: none;
+	gap: 2rem;
+}
+
+header nav li:first-child {
+	margin-right: auto;
+	font-size: 1.5rem;
+	font-family: Merriweather, Poppins;
+}
+
+header nav a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+header nav a:hover {
+	text-decoration: underline;
+}
+
+header, main {
+	margin: 2rem auto;
+	width: min(90%, 100%);
+}
+
+header, section {
+	background-color: var(--color-1);
+	padding: min(2rem, 15%) 1rem;
+	border-radius: 1rem;
+	box-shadow: 3px 3px 3px black;
+}
+
+section, .flex-container {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	text-align: center;
-	z-index: 1;
-	font-size: 2.5em;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+	flex: 0 1 60rem;
 }
 
-.go-to-project:hover {
-	background-color: #0743BC;
+.flex-container h1 {
+	display: inline-block;
+	font-weight: bold;
+	background: linear-gradient(90deg, var(--color-gradient-1), var(--color-gradient-2), var(--color-gradient-3));
+	background-clip: text;
+	color: transparent;
+	font-size: 4rem;
 }
 
-#carousel button {
-	min-width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 1px solid white;
-	background-color: #BD20F0;
+.flex-container a {
+	display: inline-block;
+	text-decoration: none;
 	color: white;
-	position: absolute;
-	top: 50%;
-	translate: 0 -50%;
-	cursor: pointer;
+	background-color: var(--primary-color);
+	padding: .75rem 1.25rem;
+	border-radius: 15px;
+	font-weight: 600;
 }
 
-#carousel button:hover {
-	background-color: #9D0ACD;
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"calculator calculator"
+	"clicking-cube rock-paper-scissors"
+	"stopwatch temperature-converter"
+	"digital-clock digital-clock"
+	"weather-app cropped-image";
+	gap: 1rem;
 }
 
-#prev_button {
-	left: 0px;
+aside {
+	display: none;
 }
 
-#next_button {
-	right: 0px;
+@media(max-width: 540px) {
+
+	header {
+		margin-top: 0;
+	}
+
+	header nav {
+		display: none;
+	}
+
+	aside {
+		display: inherit;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: #0D0E1D;
+	}
+
+	aside span {
+		anchor-name: --idk;
+		font-size: 1.5rem;
+		color: white;
+		margin-left: 1rem;
+	}
+
+	input {
+		display: none;
+	}
+
+	label {
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		cursor: pointer;
+	}
+
+	aside nav {
+		background-color: #0D0E1D;
+		position: absolute;
+		right: 0;
+		width: 80%;
+		height: 100vh;
+		box-shadow: -5px 0 5px rgba(0, 0, 0, .5);
+		translate: 100% 0;
+		transition: .5s ease;
+}
+
+	input:checked ~ nav {
+		translate: 0 0;
+	}
+
+	nav ul {
+		list-style-type: none;
+	}
+
+	nav li {
+		width: 100%;
+		padding: .5rem;
+	}
+
+	nav li:hover {
+		background-color: var(--primary-color);
+	}
+
+	nav a {
+		color: white;
+		display: inline-block;
+		text-decoration: none;
+		height: 100%;
+		width: 100%;
+	}
+
+	main {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"calculator"
+		"clicking-cube"
+		"rock-paper-scissors"
+		"stopwatch"
+		"temperature-converter"
+		"digital-clock"
+		"weather-app";
+	}
 }

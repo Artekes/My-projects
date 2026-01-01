@@ -3,70 +3,87 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
+	<title>Artem Symak</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div id="carousel">
-		<div class="card" id="calculator_card">
-			<div class="card-content">
-				<h1 class="title">Calculator</h1>
-				<p class="description">A simple calculator using javascript to interact with. Pretty simple construction but at least its looking like a calculator on iPhone.</p>
-			</div>
-			<a href="calculator/index.html" class="go-to-project">See more</a>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Artem Symak</a></li>
+				<li><a href="https://www.instagram.com/just_tomych?igsh=bHVkaDE6d256bWc2">Instagram</a></li>
+				<li><a href="#my-projects">My Projects</a></li>
+				<li><a href="mailto:a.symak.st@spseiostrava.cz">Text Me</a></li>
+			</ul>
+		</nav>
+		<div class="flex-container">
+			<h1>Hey Guys!</h1>
+			<p>I'm an advanced beginner in <strong>programming</strong>. I really wanted to study programming after 5th grade and now I'm on super cool middle school <strong>SPŠEI Ostrava</strong> on 1th grade. I'm very proud of myself. Now i learned <strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong> and <strong>PHP</strong>. Also I can write code on <strong>Python</strong> and now learning <strong>C</strong>.</p>
+			<a href="#my-projects">See my work</a>
 		</div>
+	</header>
 
-		<div class="card" id="clicking_cube">
-			<div class="card-content">
-				<h1 class="title">Clicking Cube</h1>
-				<p class="description">Just trying some events with addEventListener in JS</p>
-			</div>
-			<a href="clicking-cube/index.html" class="go-to-project">See more</a>
-		</div>
+	<main id="my-projects">
+		<section style="grid-area: calculator;">
+			<h2>Calculator</h2>
+			<p>A simple calculator using javascript to interact with. Pretty simple construction but at least its looking like a calculator on iPhone.</p>
+			<a href="calculator/index.html">See more</a>
+		</section>
+		
+		<section style="grid-area: clicking-cube;">
+			<h2>Clicking Cube</h2>
+			<p>Just trying some events with addEventListener in JS</p>
+			<a href="clicking-cube/index.html">See more</a>
+		</section>
 
-		<div class="card" id="rock_paper_scissors">
-			<div class="card-content">
-				<h1 class="title">Rock Paper Scissors</h1>
-				<p class="description">Just rock paper scissors with beautifull design.</p>
-			</div>
-			<a href="rockPaperScissors/index.html" class="go-to-project">See more</a>
-		</div>
+		<section style="grid-area: rock-paper-scissors;">
+			<h2>Rock Paper Scissors</h2>
+			<p>Just rock paper scissors with beautifull design.</p>
+			<a href="rockPaperScissors/index.html">See more</a>
+		</section>
 
-		<div class="card" id="stopwatch">
-			<div class="card-content">
-				<h1 class="title">Stopwatch</h1>
-				<p class="description">Trying to understand JS time functions. Btw going to add stopwatch to my clock project.</p>
-			</div>
-			<a href="stopwatch/index.html" class="go-to-project">See more</a>
-		</div>
+		<section style="grid-area: stopwatch;">
+			<h2>Stopwatch</h2>
+			<p>Trying to understand JS time functions. Btw maybe going to add stopwatch to my clock project.</p>
+			<a href="stopwatch/index.html">See more</a>
+		</section>
 
-		<div class="card" id="temperature">
-			<div class="card-content">
-				<h1 class="title">Temperature</h1>
-				<p class="description">My first project with JS. Just a converter temperature from Celsium to Farenheit and back.</p>
-			</div>
-			<a href="temperature/index.html" class="go-to-project">See more</a>
-		</div>
+		<section style="grid-area: temperature-converter">
+			<h2>Temperature Converter</h2>
+			<p>My first project with JS. Just a converter temperature from Celsium to Farenheit and back.</p>
+			<a href="temperature/index.html">See more</a>
+		</section>
 
-		<div class="card" id="watch">
-			<div class="card-content">
-				<h1 class="title">Digital clock</h1>
-				<p class="description">Maybe the most beautifull project that i have ever made. It was made by a tutorial ._.</p>
-			</div>
-			<a href="watch/index.html" class="go-to-project">See more</a>
-		</div>
+		<section style="grid-area: digital-clock">
+			<h2>Digital Clock</h2>
+			<p>Maybe the most beautifull project that i have ever made. It was made by a tutorial ._.</p>
+			<a href="watch/index.html">See more</a>
+		</section>
 
-		<div class="card" id="weather_app">
-			<div class="card-content">
-				<h1 class="title">Weather App</h1>
-				<p class="description">The last project on 12 hours course of JS. It's using a weather API. I'm not proud of this project because it was totaly made by a tutorial. there is nothing mine.</p>
-			</div>
-			<a href="weather/index.html" class="go-to-project">See more</a>
-		</div>
-		<button id="prev_button" onclick="prevCard()"><</button>
-		<button id="next_button" onclick="nextCard()">></button>
-	</div>
+		<section style="grid-area: weather-app">
+			<h2>Weather App</h2>
+			<p>The last project on 12 hours course of JS. It's using a weather API. I'm not proud of this project because it was totaly made by a tutorial. there is nothing mine.</p>
+			<a href="weather/index.html">See more</a>
+		</section>
 
-	<script src="script.js"></script>
+		<section style="grid-area: cropped-image">
+			<h2>Cropped Image</h2>
+			<p>Trying to understand how to make good headers. Learning masks and its synergy with gradients.</p>
+			<a href="cropped-image/index.html">See more</a>
+		</section>
+	</main>
+
+	<aside>
+		<span>Artem Symak</span>
+		<input type="checkbox" id="menu">
+		<label for="menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></label>
+		<nav>
+			<ul>
+				<li><a href="https://www.instagram.com/just_tomych?igsh=bHVkaDE6d256bWc2">Instagram</a></li>
+				<li><a href="#my-projects">My Projects</a></li>
+				<li><a href="mailto:a.symak.st@spseiostrava.cz">Text Me</a></li>
+			</ul>
+		</nav>
+	</aside>
 </body>
 </html>
