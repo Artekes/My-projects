@@ -1,7 +1,10 @@
 const addButton = document.getElementById(`add-item`);
 const mainInput = addButton.previousElementSibling;
 const list = document.getElementById(`list`);
+const footer = document.getElementById(`footer`);
 let count = 0;
+if (window.innerWidth > 660) setInterval(getSelectedText, 50);
+
 if (window.innerWidth <= 660) {
 	mainInput.placeholder = "write something";
 }
@@ -44,4 +47,54 @@ function deleteItem(element) {
 	target = target.parentNode.parentNode;
 	target.classList.add("fade");
 	setTimeout(() => target.remove(), 500);
+}
+
+function getSelectedText() {
+	const selection = window.getSelection().toString();
+	if(selection.length > 0) {
+		// console.log(window.getSelection().getRangeAt(0).getBoundingClientRect());
+		const element = window.getSelection().focusNode.parentNode;
+		if (element.nodeName === `SPAN`) showMenu();
+	} else {
+		footer.style.display = `none`;
+	}
+}
+
+function applyStyle(style) {
+	const selection = window.getSelection().toString();
+	const element = window.getSelection().focusNode.parentNode;
+	console.log(element);
+	if(selection.length > 0 && element.nodeName === `SPAN`) {
+		const elementText = element.innerText;
+		const span = document.createElement("span");;
+		switch (style) {
+		case `bold`:
+			span.style.fontWeight = `bold`;
+			break;
+		case `italic`:
+			span.style.fontStyle = `italic`;
+			break;
+		case `underline`:
+			span.style.textDecoration = `underline`;
+			break;
+		case `hightlight`:
+			span.style.backgroundColor = `#12F6CE`;
+			break; 
+		}
+		span.innerHTML = selection;
+		const originalPart = elementText.split(selection);
+		element.innerHTML = originalPart[0];
+		element.appendChild(span);
+		element.innerHTML += originalPart[1];
+		console.log(element.innerHTML);
+	}
+}
+
+function showMenu() {
+	const textPos = window.getSelection().getRangeAt(0).getBoundingClientRect();
+	footer.style.display = `block`;
+	footer.style.top = window.getSelection().getRangeAt(0).getBoundingClientRect().top + `px`;
+	footer.style.left = (textPos.width / 2 + textPos.left) + "px";
+	// footer.style.left = window.getSelection().getRangeAt(0).getBoundingClientRect().right + `px`;
+	footer.style.translate = `-50% -110%`;
 }
